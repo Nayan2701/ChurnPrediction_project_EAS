@@ -1,2 +1,6 @@
-.env
+venv/
+__pycache__/
 .DS_Store
+.ipynb_checkpoints/
+mlflow.db
+mlruns/

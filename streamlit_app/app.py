@@ -38,11 +38,13 @@ with st.form("churn_form"):
                 prob = res.json()["churn_probability"]
                 st.success(f"Churn Probability: {prob:.1%}")
             else:
-               res = requests.post(API_URL, json=payload)
-               if res.status_code == 200:
-                 prob = res.json()["churn_probability"]
-                 st.success(f"Churn Probability: {prob:.1%}")
-               else:
+                res = requests.post(API_URL, json=payload)
+                if res.status_code == 200:
+                  prob = res.json()["churn_probability"]
+                  st.success(f"Churn Probability: {prob:.1%}")
+                else:
             # THIS IS THE NEW PART
                  st.error(f"Error {res.status_code}")
                  st.write(res.text)
+        except Exception as e:
+            st.error(f"Connection Error: {e}")

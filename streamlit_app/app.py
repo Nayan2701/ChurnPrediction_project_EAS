@@ -3,7 +3,7 @@ import requests
 import json
 import os
 
-API_URL = "https://churn-api-nayan.onrender.com/predict"
+API_URL = "https://churnprediction-project-eas.onrender.com/predict"
 SCHEMA_PATH = "/app/data/data_schema.json"
 
 st.set_page_config(page_title="Customer Churn Predictor", layout="centered")
